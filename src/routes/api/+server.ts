@@ -14,7 +14,6 @@ export const POST: RequestHandler = async (event) => {
   const body:any = Object.fromEntries(await data)
   const skillsets = body.skillsets.split(',');
   const hobbies = body.hobbies.split(',');
-
   const newFreelancer = await freelancersCollection.insertOne({
     username: body.username,
     email: body.email,
@@ -22,13 +21,12 @@ export const POST: RequestHandler = async (event) => {
     skillset: skillsets,
     hobby: hobbies
   })
-  console.log(newFreelancer)
-  return json({})
+  return json(newFreelancer)
 }
 
 export const PUT: RequestHandler = async (event) => {
   const data = await event.request.json();
-  const newFreelancer = await freelancersCollection.updateOne({
+  const updateFreelancer = await freelancersCollection.updateOne({
     _id: new ObjectId(data.id)},{
       $set: {
         username: data.username,
@@ -38,12 +36,11 @@ export const PUT: RequestHandler = async (event) => {
         hobby: data.hobbies
       }
   })
-  return json({})
+  return json(updateFreelancer)
 }
 
 export const DELETE: RequestHandler = async (event) => {
   const id:any = event.url.searchParams.get('id');
   const deleteFreelancer = await freelancersCollection.deleteOne({_id: new ObjectId(id)})
-  console.log(deleteFreelancer)
-  return json({})
+  return json(deleteFreelancer)
 }
