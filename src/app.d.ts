@@ -1,0 +1,20 @@
+// See https://kit.svelte.dev/docs/types#app
+// for information about these interfaces
+declare global {
+	namespace App {
+		// interface Error {}
+		// interface Locals {}
+		// interface PageData {
+		// }
+		// interface Platform {}
+		interface freelancer {
+			username: string,
+			email: string,
+			phone: string,
+			skillset: string,
+			hobby: string
+		}
+	}
+}
+
+export {};
