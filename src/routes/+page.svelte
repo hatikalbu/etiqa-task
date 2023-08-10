@@ -28,7 +28,7 @@
       <p class="mt-2 text-sm text-gray-700">A list of all the freelancers</p>
     </div>
     <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-      <a href="/register" class="block rounded-md bg-amber-400 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600">Add freelancer</a>
+      <a href="/register" class="block rounded-md bg-amber-400 px-3 py-2 text-center text-sm font-semibold text-neutral-900 shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600">Add freelancer</a>
     </div>
   </div>
   <div class="mt-8 flow-root">
